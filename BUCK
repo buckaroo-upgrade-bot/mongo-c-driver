@@ -175,6 +175,7 @@ cxx_library(
       ('src/common', '**/*.h'),
       ('src/libmongoc/src', '**/*.h'),
     ]).items() + [
+      ('mongoc.h', 'src/libmongoc/src/mongoc/mongoc.h'),
       ('mongoc/mongoc-config.h', ':mongoc-config'),
       ('mongoc/mongoc-version.h', ':mongoc-version'),
     ]
