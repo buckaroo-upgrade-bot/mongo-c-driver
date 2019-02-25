@@ -29,3 +29,9 @@ VERSION_RELEASED
 Debug
 install_manifest.txt
 x64
+
+.buckd
+buck-out
+buckaroo
+.buckconfig.local
+.buckconfig.d
