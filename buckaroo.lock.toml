@@ -1,2 +1,9 @@
-manifest = "d0945ce4c316309a2c6a2058f97ec8c73ff26e7cfb77b29835c2914efe1ff278"
+manifest = "cf4027c7297d0099de8056f20ff7b9d967d618a7d23131f0b1c03ebfe0b0833e"
 
+[[dependency]]
+package = "github.com/buckaroo-pm/openssl"
+target = "//:openssl"
+
+[lock."github.com/buckaroo-pm/openssl"]
+versions = [ "tag=1.0.2j" ]
+revision = "e61671249ee5dfa59b663d135b64dd6fe9efe9d0"

@@ -1,1 +1,6 @@
 targets = [ "//:monogoc" ]
+
+[[dependency]]
+package = "github.com/buckaroo-pm/openssl"
+version = "*"
+

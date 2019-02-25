@@ -1,4 +1,5 @@
 load('//:subdir_glob.bzl', 'subdir_glob')
+load('//:buckaroo_macros.bzl', 'buckaroo_deps')
 
 genrule(
   name = 'bson-version',
@@ -174,7 +175,7 @@ cxx_library(
     ('macos.*', macos_srcs),
     ('windows.*', windows_srcs),
   ],
-  deps = [
+  deps = buckaroo_deps() + [
     ':bson',
   ],
   exported_post_platform_linker_flags = [
