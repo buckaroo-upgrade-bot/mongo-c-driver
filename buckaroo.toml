@@ -1,6 +1,9 @@
 targets = [ "//:monogoc" ]
 
 [[dependency]]
-package = "github.com/buckaroo-pm/openssl"
+package = "github.com/buckaroo-pm/madler-zlib"
 version = "*"
 
+[[dependency]]
+package = "github.com/buckaroo-pm/openssl"
+version = "*"

@@ -1,8 +1,16 @@
-manifest = "cf4027c7297d0099de8056f20ff7b9d967d618a7d23131f0b1c03ebfe0b0833e"
+manifest = "c2b7e3a806cd0cce3f0769ee5662e5f4ba6e810ae297f8712ecb0c3dc96a4a4f"
+
+[[dependency]]
+package = "github.com/buckaroo-pm/madler-zlib"
+target = "//:zlib"
 
 [[dependency]]
 package = "github.com/buckaroo-pm/openssl"
 target = "//:openssl"
+
+[lock."github.com/buckaroo-pm/madler-zlib"]
+versions = [ "1.2.11" ]
+revision = "cbbc5ea260a454509d0f461de248b8e0b67bc839"
 
 [lock."github.com/buckaroo-pm/openssl"]
 versions = [ "tag=1.0.2j" ]
