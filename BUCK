@@ -1,31 +1,6 @@
 load('//:subdir_glob.bzl', 'subdir_glob')
 
 genrule(
-  name = 'configure',
-  out = 'out',
-  srcs = glob([
-    'VERSION_CURRENT',
-    'COPYING',
-    '*.txt',
-    'src/**/*.txt',
-    'src/**/*.in',
-    'src/**/*.cmake',
-    'src/**/*.json',
-    'src/**/*.crt',
-    'src/**/*.pem',
-    'build/**/*',
-    'generate_uninstall/**/*',
-    'orchestration_configs/**/*',
-  ]),
-  cmd = ' && '.join([
-    'mkdir -p $OUT',
-    'cd $OUT',
-    'cmake $SRCDIR',
-  ]),
-  cacheable = False,
-)
-
-genrule(
   name = 'bson-version',
   out = 'bson-version.h',
   srcs = [
@@ -92,6 +67,9 @@ cxx_library(
   platform_preprocessor_flags = [
     ('^macos.*', gcc_pp_flags),
     ('^linux.*', gcc_pp_flags),
+  ],
+  exported_post_platform_linker_flags = [
+    ('linux.*', [ '-lpthread' ]),
   ],
   visibility = [
     'PUBLIC',
@@ -198,6 +176,9 @@ cxx_library(
   ],
   deps = [
     ':bson',
+  ],
+  exported_post_platform_linker_flags = [
+    ('linux.*', [ '-lrt' ]),
   ],
   visibility = [
     'PUBLIC',

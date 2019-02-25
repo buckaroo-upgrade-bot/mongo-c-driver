@@ -1,0 +1,9 @@
+cxx_binary(
+  name = 'mongoc-stat',
+  srcs = [
+    'mongoc-stat.c',
+  ],
+  deps = [
+    '//:mongoc',
+  ],
+)
