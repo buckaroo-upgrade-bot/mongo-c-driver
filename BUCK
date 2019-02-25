@@ -82,6 +82,7 @@ cxx_library(
     ]).items() + [
       ('bson/bson-version.h', ':bson-version'),
       ('bson/bson-config.h', ':bson-config'),
+      ('bson.h', 'src/libbson/src/bson/bson.h'),
     ]
   ),
   srcs = glob([
