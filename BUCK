@@ -179,7 +179,7 @@ cxx_library(
     ':bson',
   ],
   exported_post_platform_linker_flags = [
-    ('linux.*', [ '-lrt' ]),
+    ('linux.*', [ '-lrt', '-lresolv' ]),
   ],
   visibility = [
     'PUBLIC',
