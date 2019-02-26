@@ -123,7 +123,7 @@ genrule(
     'sed -i "s/@MONGOC_NO_AUTOMATIC_GLOBALS@/0/g" $OUT',
     'sed -i "s/@MONGOC_HAVE_SOCKLEN@/1/g" $OUT',
     'sed -i "s/@MONGOC_ENABLE_SASL_SSPI@/0/g" $OUT',
-    'sed -i "s/@MONGOC_HAVE_ASN1_STRING_GET0_DATA@/1/g" $OUT',
+    'sed -i "s/@MONGOC_HAVE_ASN1_STRING_GET0_DATA@/0/g" $OUT',
     'sed -i "s/@MONGOC_HAVE_SASL_CLIENT_DONE@/0/g" $OUT',
     'sed -i "s/@MONGOC_ENABLE_SASL@/0/g" $OUT',
     'sed -i "s/@MONGOC_ENABLE_SASL_CYRUS@/0/g" $OUT',
